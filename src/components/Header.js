@@ -8,7 +8,7 @@ import { IoAddCircleOutline } from "react-icons/io5";
 
 const Header = () => {
   return (
-    <div>
+    <div className="shadow-sm border-b sticky top-0 bg-white z-30">
       {/* Left */}
 
       <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
