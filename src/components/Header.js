@@ -1,14 +1,18 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { AiOutlineSearch } from "react-icons/ai";
+import { AiFillHome } from "react-icons/ai";
+import { IoAddCircleOutline } from "react-icons/io5";
 
 const Header = () => {
   return (
     <div>
       {/* Left */}
 
-      <div className="flex items-center justify-between max-w-6xl">
-        <div className="h-24 w-24 relative hidden lg:inline-grid">
+      <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
+        <div className="h-24 w-24 relative hidden lg:inline-grid ">
           <Image
             src="https://asset.brandfetch.io/ido5G85nya/idjNzcWu9R.png"
             height={100}
@@ -38,7 +42,16 @@ const Header = () => {
         </div>
 
         {/* Right */}
-        <h1>Right sides</h1>
+
+        <div className="flex space-x-4 items-center">
+          <AiFillHome className="h-6 w-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
+          <IoAddCircleOutline className="h-6 w-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
+          <img
+            src="https://avatars.githubusercontent.com/u/88943310?v=4"
+            alt="user-image"
+            className="h-10 rounded-full cursor-pointer "
+          />
+        </div>
       </div>
     </div>
   );
