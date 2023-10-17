@@ -1,7 +1,7 @@
-import { BsThreeDots } from "react-icons/bs";
+import { BsThreeDots, BsBookmark } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
-import { BsBookmark } from "react-icons/bs";
+import { BiHappyAlt } from "react-icons/bi";
 
 const Post = ({ post }) => {
   return (
@@ -30,6 +30,23 @@ const Post = ({ post }) => {
         </div>
         <BsBookmark className="btn" />
       </div>
+
+      {/* Post Comments */}
+      <p className="p-5 truncate ">
+        <span className="font-bold mr-2">{post?.username}</span>
+        {post?.caption}
+      </p>
+
+      {/* Post Input box */}
+      <form action="" className="flex items-center p-4">
+        <BiHappyAlt className="h-7" />
+        <input
+          className="border-none flex-1 focus:ring-0"
+          type="text"
+          placeholder="Enter your comment..."
+        />
+        <button className="text-blue-400 font-bold">Post</button>
+      </form>
     </div>
   );
 };
