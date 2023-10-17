@@ -1,4 +1,7 @@
 import { BsThreeDots } from "react-icons/bs";
+import { AiOutlineHeart } from "react-icons/ai";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import { BsBookmark } from "react-icons/bs";
 
 const Post = ({ post }) => {
   return (
@@ -13,13 +16,20 @@ const Post = ({ post }) => {
         <p className="font-bold flex-1">{post?.username}</p>
         <BsThreeDots className="h-5" />
       </div>
-
       {/* Post Image */}
       <img
         className="object-cover w-full"
         src={post?.img}
         alt={post?.username}
       />
+      {/* Post Button */}
+      <div className="flex justify-between px-4 pt-4">
+        <div className="flex space-x-4">
+          <AiOutlineHeart className="btn" />
+          <IoChatbubbleEllipsesOutline className="btn" />
+        </div>
+        <BsBookmark className="btn" />
+      </div>
     </div>
   );
 };
